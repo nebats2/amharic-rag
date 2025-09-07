@@ -7,6 +7,8 @@ embeddings, and stores them in a Dockerized Qdrant vector database. This enables
 efficient document retrieval to provide context for AI-powered chat prompts.
 </p>
 
+
+
 <h2>Core Functions are</h2>
 <ul>
 <li>Configuring OpenAI chat(api key)</li>
@@ -101,5 +103,6 @@ front-end client  Authentication : Bearer = token_value header</li>
 <li>GET : /chat/similarity  :  you can list embedded document similar to your query </li>
 </ul>
 
+short Video :<a href='https://drive.google.com/file/d/1MTPWPlQKIFZ-dm0_7S_1tFaXPFGyF6Wy/view?usp=sharing'> Short demo video</a>
 <hr/>
 <center>Tsega.B Kum : tsegamtu@gmail.com, +251906137077</center>
