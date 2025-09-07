@@ -4,6 +4,11 @@ venv/
 env/
 ENV/
 
+.idea/
+*.iml
+*.iws
+*.ipr
+
 # Python cache
 __pycache__/
 *.py[cod]
