@@ -2,7 +2,7 @@
 <h1>Amharic Rag</h1>
 
 <p>
-mharicRag is a FastAPI application that processes PDF documents, detect amharic and english languages, converts them into vector 
+AmharicRag is a ready to ship FastAPI application that processes PDF documents, detect amharic and english languages, converts them into vector 
 embeddings, and stores them in a Dockerized Qdrant vector database. This enables accurate and
 efficient document retrieval to provide context for AI-powered chat prompts.
 </p>
@@ -16,8 +16,10 @@ efficient document retrieval to provide context for AI-powered chat prompts.
 <li>Retrieval and chat to LLM model(OpenAI)</li>
 <li>Caching and embedding QA (question and answers) based on rewards for efficient document retrieval and chat </li>
 </ul>
-<h2><i>You must set and configure your OpenAI api key and model for chating. Embedding and vector store 
-are on-premises ollama and qdrant vector db. please follow the installation steps properly</i></h2>
+<h4><i>You must set and configure your OpenAI api key and model for chating. Embedding and vector store 
+are on-premises ollama and qdrant vector db. please follow the installation steps properly</i></h4>
+<hr/>
+ 
 <h3>Authentications</h3>
 <p>The API relies on an OAuth2 Jwt token for user authentication. For simplicity, only one root user 
 is available, and you can make changes to the username, and hashed and raw password under app/settings/.env. 
@@ -49,13 +51,16 @@ completed. (please refer the api document on how to configure)</p>
 <ol>
 <li><b>Pull repo :</b> Create a directory and clone the app inside (E.g. C:/Users/documents/talent)</li>
 <li> <b>Run docker:</b> Make sure you are Running the docker on your system</li>
-<li> <b>Build docker-compose :</b> Redirect to the directory or run the cmd and execute the (> docker-compose up --build -d) </li>
+<li> <b>Build docker-compose :</b> Redirect to the directory or run the cmd and execute :<br/>
+ <b> (> docker-compose up --build -d)</b> </li>
 <li><b>Pull Ollama embedding model :</b> Ollama model pulling: the default model for the ollama embedding is <b>nomic-embed-text</b>
- use ( > docker exec ollama ollama pull nomic-embed-text ) command to pull nomic-embed-text model for 
+ use <br/><b>  > docker exec ollama ollama pull nomic-embed-text </b> <br/>command to pull nomic-embed-text model for 
 the ollama inside the docker 
 </li>
-<li><b>List Api documentation : </b> Once the docker compose build and up complete, open the browser \n 
+<li><b>Open on browser and List Api documentation : </b> Once the docker compose build and up complete, open the browser 
+ <br/>
        <a href="http://localhost:8071/docs">http://localhost:8071/docs</a>
+ <br/>
 </li>
 
 </ol>
@@ -72,8 +77,10 @@ with status message, status code, body fields.</p>
       "raw_password": "123456"
      }
 </li>
-<li>Copy the body at the response object and paste to in input box clicking the "authorize", or to your
+<li>Copy the <strong>body</strong> field in the response object and paste to in input box clicking the "authorize", or to your
 front-end client  Authentication : Bearer = token_value header</li>
+ <img width="1030" height="261" alt="image" src="https://github.com/user-attachments/assets/3b77ee39-5563-450f-bfaf-1abb9498dbcf" />
+
 </ul>
 
 <h3>Configuring OpenAI</h3>
