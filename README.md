@@ -7,6 +7,7 @@ embeddings, and stores them in a Dockerized Qdrant vector database. This enables
 efficient document retrieval to provide context for AI-powered chat prompts.
 </p>
 
+<img width="1161" height="330" alt="image" src="https://github.com/user-attachments/assets/8e0e1f9b-6c01-4617-956e-b0f5548843ec" />
 
 
 <h2>Core Functions are</h2>
