@@ -11,7 +11,18 @@ from fastapi import FastAPI
 
 from app.services.doc_processing import setup_collection_store
 
-app = FastAPI()
+app = FastAPI(
+    title = "Amharic RAG",
+    summary = "Simple RAG API detecting and splitting pdf law documents language wise, vectorizing and embedding to local qdrant store and providing context to chat LLM",
+    description= """
+    Amharic help you 
+    # Upload and process ziped PDF law files, writen in Amharic or English scripts
+    # Split and vectorize the contents language wise for efficiency and optimal retrieval
+    # Retrieve and load based on the user question and build a context for LLM
+    # Set OpenAI access api_key and model options to chat
+    # You can set the Ollama embedding model, dimensions in the environment setting file
+    """)
+
 app.include_router(chat_route.router)
 app.include_router(upload_route.router)
 app.include_router(auth_route.route)
